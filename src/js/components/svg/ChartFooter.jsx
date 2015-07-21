@@ -54,7 +54,7 @@ var ChartFooter = React.createClass({
 		var sourceText;
 		var sourceLine;
 		if (this.props.metadata.source && this.props.metadata.source !== "") {
-			sourceText = "Data: " + this.props.metadata.source;
+			sourceText = "" + this.props.metadata.source;
 		} else {
 			sourceText = "";
 		}

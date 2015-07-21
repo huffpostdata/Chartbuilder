@@ -77,7 +77,6 @@ function registeredCallback(payload) {
 	var action = payload.action;
 	var parser;
 	var config;
-
 	switch(action.eventName) {
 		/*
 		* Receive a new model, which includes metadata. Respond by parsing input and

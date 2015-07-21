@@ -34,7 +34,7 @@ var display = {
 	labelXMargin: "0.6em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
-	afterTitle: "1.6em",
+	afterTitle: "33.6px",
 	afterLegend: "1.6em",
 	blockerRectOffset: "0.3em",
 	columnPaddingCoefficient: 0.3,
@@ -48,7 +48,7 @@ var display = {
 	margin: {
 		top: "0.8em",
 		right: "0.25em",
-		bottom: "0.15em",
+		bottom: "0.5em",
 		left: "0.25em"
 	},
 	padding: {
@@ -127,9 +127,9 @@ var defaultProps = {
 	 */
 	metadata: {
 		chartType: 'xy',
-		title: "",
-		source: "",
-		credit: "Made with Chartbuilder",
+		title: "Your Title Here",
+		source: "Source: ",
+		credit: "The Huffington Post",
 		size: "auto"
 	}
 };

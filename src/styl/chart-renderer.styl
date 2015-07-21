@@ -1,28 +1,28 @@
-$em_size = 20px
-$em_size_small = 14px
-$em_size_large = 36px
+$em_size = 15px
+$em_size_small = 15px
+$em_size_large = 15px
 
 div.renderer-wrapper
   font-smoothing antialiased
   width 100%
   margin 0
   padding 0
-	.em-size-wrapper
-		width 100%
-	.em-size
-		position absolute
-		visibility hidden
-		top 0
-		line-height 1em
-		margin 0 0 0 -1000px
-		padding 0
-		width 1em
-		height 1em
+    .em-size-wrapper
+        width 100%
+    .em-size
+        position absolute
+        visibility hidden
+        top 0
+        line-height 1em
+        margin 0 0 0 -1000px
+        padding 0
+        width 1em
+        height 1em
 
 svg
   &.renderer-svg
     fill $color-bg
-    font-family $font-sans-light
+    font-family $hpin-data-font
     text-rendering optimizeLegibility
     box-sizing border-box
     .svg-background
@@ -32,17 +32,18 @@ svg
       line-height 1em
 
 .d4
-  font-size $em_size
+  font-size 15px
   .axis
     .tick
-      font-family $font-sans-light
+      font-family $hpin-data-font
       &[data-anchor="middle"]
         text
           text-anchor middle
       text
-        fill $color-chart-axis-text
+        font-family $hpin-data-font
         shape-rendering crispEdges
         text-anchor middle
+        fill black
       &:first-child
         text
           text-anchor middle
@@ -74,7 +75,7 @@ svg
           text-anchor start
 
   .concealer-label
-    font-family $font-sans-light
+    font-family $hpin-data-font
     text
       fill $color-chart-axis-text
     rect
@@ -96,10 +97,10 @@ svg
         stroke-linecap round
         stroke-linejoin round
     .label
-      font-family $font-sans-light
+      font-family $hpin-data-font
 
   .column-label
-    fill $color-chart-axis-text
+    fill $hpin-data-font
 
   line.no-label-tick
     fill none
@@ -108,15 +109,15 @@ svg
     shape-rendering crispEdges
 
 .svg-text
-  font-family $font-sans-light
+  font-family $hpin-data-font
   font-size $em_size
   &.svg-text-credit
-    font-size $em_size*0.6
-    fill $color-chart-meta
+    font-size 11px !important
+    fill #666
     text-anchor start
   &.svg-text-source
-    font-size $em_size*0.6
-    fill $color-chart-meta
+    font-size 11px
+    fill #666
     //text
       //dominant-baseline central
     &.left
@@ -124,18 +125,20 @@ svg
     &.right
       text-anchor end
   &.svg-text-title
-    fill $color-body-text
-    font-family $font-sans
-    font-size $em_size
+    fill black
+    font-family $hpin-data-font
+    font-size 28px !important
+    line-height 33.6px
+    font-weight bold
 
 .svg-source-pipe
-	stroke $color-chart-meta
-	fill none
-	stroke-width 0.8px
+    stroke $color-chart-meta
+    fill none
+    stroke-width 0.8px
 
 .svg-label-text
-  font-size $em_size
-  font-family $font-sans-light
+  font-size 15px
+  font-family $hpin-data-font
   cursor move
 
 .crosshair
@@ -148,11 +151,6 @@ svg
   visibility hidden
 
 .medium
-  .em-size
-    font-size $em_size
-  .d4
-    font-size $em_size
-
     .margins
       .line, .other-line
         path
@@ -160,39 +158,21 @@ svg
 
   .svg-text
     font-size $em_size
-    &.svg-text-credit
-      font-size $em_size*0.6
-    &.svg-text-source
-      font-size $em_size*0.6
-    &.svg-text-title
-      font-size $em_size
 
 .small
-  .em-size
-    font-size $em_size_small
-  .d4
-    font-size $em_size_small
-
     .margins
       .line, .other-line
         path
           stroke-width 2px
 
   .svg-text
-    font-size $em_size_small
-    &.svg-text-credit
-      font-size $em_size*0.5
-    &.svg-text-source
-      font-size $em_size*0.5
     &.svg-text-pipe
       text
         dominant-baseline central
         font-size $em_size*0.6
-    &.svg-text-title
-      font-size $em_size_small
 
   .svg-label-text
-    font-size $em_size_small
+    font-size $em_size
 
 
 .large
@@ -207,15 +187,9 @@ svg
 
   .svg-text
     font-size $em_size
-    &.svg-text-credit
-      font-size $em_size*0.6
-    &.svg-text-source
-      font-size $em_size*0.6
-    &.svg-text-title
-      font-size $em_size
 
   .svg-label-text
     font-size $em_size
 
 .cb-credit-logo
-	fill $color-chart-meta
+    fill $color-chart-meta
